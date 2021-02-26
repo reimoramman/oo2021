@@ -1,13 +1,15 @@
 public class Refrigerator {
 
+  private int apple;
+  private int cabbage;
+  private int chestnut;
+
   public Refrigerator(int apple, int cabbage, int chestnut){
     this.apple = apple;
     this.cabbage = cabbage;
     this.chestnut = chestnut;
   }
-    private int apple;
-    private int cabbage;
-    private int chestnut;
+    
   
     public int getApple(){
       return apple;
