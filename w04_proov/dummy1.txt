@@ -1,3 +1,2 @@
-public enum Direction {
-    UP, RIGHT, DOWN, LEFT
-  }
+1000,Reimo,java,2021
+2000,Reimo2,java2,2021
