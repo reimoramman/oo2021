@@ -1,3 +1,4 @@
+import java.time.Year;
 
 public class EstonianID implements PersonalCodeBehavior {
     private String code;
@@ -25,13 +26,24 @@ public class EstonianID implements PersonalCodeBehavior {
   
     @Override
     public String getDOB() {
-        String dob = Integer.parseInt(code.substring(5,7)) + "." + Integer.parseInt(code.substring(3,5)) + "." + getFullYear();
-      return dob;
-    }
+      String months[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
+              "October", "November", "December" };
+      int month = Integer.parseInt(code.substring(3, 5));
+      int day = Integer.parseInt(code.substring(5, 7));
+      return day + ". " + months[month - 1] + ", " + getFullYear();
+  }
+
+    public int[] getDate() {
+      int day = Integer.parseInt(code.substring(5, 7));
+      int month = Integer.parseInt(code.substring(3, 5));
+      int[] data = {month, day };
+      return data;
+  }
 
     @Override
-    public String getAge() {
-      return null;
+    public Integer getAge() {
+      Integer age = Year.now().getValue() - getFullYear();
+      return age;
     }
     
   }

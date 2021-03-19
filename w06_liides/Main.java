@@ -5,5 +5,6 @@ public class Main {
       System.out.println(est.getGender());
       System.out.println(est.getFullYear());
       System.out.println(est.getDOB());
+      System.out.println(est.getAge());
     }
   }
