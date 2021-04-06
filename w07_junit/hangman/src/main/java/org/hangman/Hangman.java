@@ -20,7 +20,14 @@ public class Hangman{
    public static String word = words[(int) (math.random() * words.length)];
    public static int wrongGuess = 0;
 
-   public static void main(String[]args){
-      Scanner sc = new Scanner(System.in);
+   public static void play(){
+      while(true){
+         String guessed = guess();
       }
+      
+   }
+   public static String guess(){
+      Scanner scGuess = new Scanner(System.in);
+      return scGuess;
+   }
 }
