@@ -7,17 +7,20 @@ kus main meetod, kus te teete uue objekti mängust,
 kus kasutaja saab mängida läbi)*/
 
 
+// Kasutatud allikad
+// https://www.considerable.com/entertainment/games/hangman/
+
+
 package org.hangman;
 import java.util.Scanner;
-
 
 
 public class Hangman{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
    public static String word = words[(int) (math.random() * words.length)];
    public static int wrongGuess = 0;
-}
 
-public static void main(String[]args){
-   Scanner sc = new Scanner(System.in);
+   public static void main(String[]args){
+      Scanner sc = new Scanner(System.in);
+      }
 }
