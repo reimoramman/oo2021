@@ -19,6 +19,8 @@ public class Hangman{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
    public static String word = words[(int) (math.random() * words.length)];
    public static int wrongGuess = 0;
+   public static String[] splitWord = word.split("");
+   public static String[] splitLength = String[word.length()];
 
    public static void play(){
       while(true){
@@ -28,6 +30,6 @@ public class Hangman{
    }
    public static String guess(){
       Scanner scGuess = new Scanner(System.in);
-      return scGuess;
+      return scGuess.next();
    }
 }
