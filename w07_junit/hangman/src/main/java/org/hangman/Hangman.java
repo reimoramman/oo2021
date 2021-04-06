@@ -11,4 +11,6 @@ package org.hangman;
 
 public class Hangman{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
+   public static String word = words[(int) (math.random() * words.length)];
+   public static int wrongGuess = 0;
 }
