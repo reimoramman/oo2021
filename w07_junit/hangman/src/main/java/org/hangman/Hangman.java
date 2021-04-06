@@ -8,9 +8,16 @@ kus kasutaja saab mängida läbi)*/
 
 
 package org.hangman;
+import java.util.Scanner;
+
+
 
 public class Hangman{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
    public static String word = words[(int) (math.random() * words.length)];
    public static int wrongGuess = 0;
+}
+
+public static void main(String[]args){
+   Scanner sc = new Scanner(System.in);
 }
