@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.ArrayList;
 
 
-public class Hangman{
+public class Hangman implements Keyboard{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
    private static Random r = new Random();
    public static String word = words[(r.nextInt(words.length))];
@@ -26,8 +26,8 @@ public class Hangman{
    public static String[] splitLength = new String[word.length()];
    public static ArrayList<String> wrong = new ArrayList<String>();
 
-   public static void play(){
-      String guessed = guess();
+   public void play(){
+      String guessed = getInput();
       if(inWord(splitWord, guessed)){
          splitLength = fillList(splitWord, splitLength, guessed);
       }
@@ -38,7 +38,9 @@ public class Hangman{
          }
       }
    }
-   public static String guess(){
+
+   @Override
+   public String getInput(){
       Scanner scGuess = new Scanner(System.in);
       scGuess.close();
       return scGuess.next();

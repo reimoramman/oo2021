@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
-public class Game implements Keyboard{
+public class Game{
     private static int counter = 0;
     static Scanner scanner = new Scanner(System.in);
     private static String continu = "y";
@@ -60,11 +60,5 @@ public class Game implements Keyboard{
         System.out.println("Paku täht:");
 
         
-    }
-    @Override
-    public String getInput(char a) {
-        
-        return null;
-    }
-    
+    } 
 }
