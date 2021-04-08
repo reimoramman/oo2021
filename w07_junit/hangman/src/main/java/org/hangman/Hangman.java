@@ -13,35 +13,36 @@ kus kasutaja saab mängida läbi)*/
 
 package org.hangman;
 import java.util.Scanner;
+import java.util.Random;
 import java.util.ArrayList;
 
 
 public class Hangman{
    private static String[] words = {"apple", "banana", "programming", "thunderstorm"};
-   public static String word = words[(int) (math.random() * words.length)];
+   private static Random r = new Random();
+   public static String word = words[(r.nextInt(words.length))];
    public static int wrongGuess = 0;
    public static String[] splitWord = word.split("");
-   public static String[] splitLength = String[word.length()];
+   public static String[] splitLength = new String[word.length()];
    public static ArrayList<String> wrong = new ArrayList<String>();
 
    public static void play(){
-      while(true){
-         String guessed = guess();
-         if(inWord(splitWord, guessed)){
-            splitLength = fillList(splitWord, splitLength, guessed);
-         }
-         else{
-            wrongGuess ++;
-            if(!wrong.contains(guessed)){
-               wrong.add(guessed);
-            }
+      String guessed = guess();
+      if(inWord(splitWord, guessed)){
+         splitLength = fillList(splitWord, splitLength, guessed);
+      }
+      else{
+         wrongGuess ++;
+         if(!wrong.contains(guessed)){
+            wrong.add(guessed);
          }
       }
-      
    }
    public static String guess(){
       Scanner scGuess = new Scanner(System.in);
+      scGuess.close();
       return scGuess.next();
+      
    }
 
    public static boolean inWord(String[] list, String inString){
@@ -60,5 +61,9 @@ public class Hangman{
          }
       }
       return toList;
+   }
+
+   public String[] getSplitLength(){
+      return splitLength;
    }
 }
