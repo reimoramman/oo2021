@@ -19,6 +19,18 @@ public class AppTest{
         assertTrue(! Hangman.inWord(list, inString));
     }
 
-    
+    @Test
+    public void gallowsTest(){
+        Gallows gallows = new Gallows();
+        int  testnumber = 4;
+        String image = "";
+        image+="              __\n";
+        image+="              |\n";
+        image+="              |\n";
+        image+="              |\n";
+        image+="              |\n";
+        image+="_/¯¯¯------/¯¯¯¯¯¯¯¯¯¯¯¯¯\\-----\\_____";
+        assertTrue(gallows.gallows(testnumber).equals(image));
+    }
     
 }
