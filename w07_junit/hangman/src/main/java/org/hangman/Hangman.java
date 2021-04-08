@@ -42,7 +42,7 @@ public class Hangman implements Keyboard{
    @Override
    public String getInput(){
       Scanner scGuess = new Scanner(System.in);
-      scGuess.close();
+      //scGuess.close();
       return scGuess.next();
       
    }
