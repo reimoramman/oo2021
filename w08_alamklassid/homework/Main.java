@@ -12,6 +12,5 @@ public class Main{
         dm.bensiiniAutoVanus();
 
         System.out.println();
-    }
-    
+    }   
 }

@@ -1,0 +1,4 @@
+BMW,bensiin
+Audi,bensiin
+Citroen,diisel
+Fiat,diisel
