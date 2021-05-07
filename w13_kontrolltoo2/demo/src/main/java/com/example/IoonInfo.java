@@ -6,4 +6,8 @@ public class IoonInfo implements Ioon {
   public double aatomMassideSumma();
   public float laneg();
   
+  public IoonInfo(String nimetus, double aatomMassideSumma, float laeng){
+
+  }
 }
+//paus ja hommikusõõk
