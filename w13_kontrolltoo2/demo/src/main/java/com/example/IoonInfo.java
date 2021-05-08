@@ -2,11 +2,11 @@ package com.example;
 
 public class IoonInfo implements Ioon {
 
-  public String nimetus();
-  public double aatomMassideSumma();
-  public float laneg();
+  private String nimetus;
+  private double aatomMassideSumma;
+  private int laeng;
   
-  public IoonInfo(String nimetus, double aatomMassideSumma, float laeng){
+  public IoonInfo(String nimetus, double aatomMassideSumma, int laeng){
     this.nimetus = nimetus;
     this.aatomMassideSumma = aatomMassideSumma;
     this.laeng = laeng;

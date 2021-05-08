@@ -1,7 +1,6 @@
 package com.example;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -36,7 +35,7 @@ public class IoonTest{
     }
 
     @Test
-    public void test 6(){
+    public void test6(){
         assertEquals(-1, ioon2.getLaeng());
     }
 
